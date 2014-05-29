@@ -1,0 +1,326 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% load maps_tags %}
+{% load layers_tags %}
+{% load pagination_tags %}
+{% load staticfiles %}
+{% load url from future %}
+{% comment %}
+This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs.
+{% endcomment %}
+{% block hero %}
+    <div class="hero-unit">
+        <!--<h1>{% trans "NDMA GeoNode" %}</h1>-->
+        <div class="hero-unit-content">
+        <div class="span4">
+        
+	 
+ 		  {% if site_wide_announcements %}
+      <div class="News">
+        {% for announcement in site_wide_announcements %}
+        <div class="alert alert-block announcement">
+          <a type="button" class="close" data-dismiss="alert" data-dismiss-url="{% url "announcements_dismiss" announcement.pk %}" href="#">×</a>
+          <h4><a href="{{ announcement.get_absolute_url }}">{{ announcement }}</a></h4>
+          <p><small><em>{{ announcement.creation_date }}</em></small></p>
+          <div>{{ announcement.content }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+						
+						 <div id="newsslider">
+		<div id="newsmask">
+			<ul>
+				<li>
+					<a href="#" title="Earthquake Risk Assessment"><img src="../static/img/logo4.jpg" /></a>
+					<span><h2>Earthquake Risk Assessment</h2>
+Two days Workshop on Earthquake Risk Assessment to be organized for the NWG member in CDA Islamabad. Detail Information and agenda will be available soon...
+</span>
+				</li>
+				<li>
+					<a href="#" title="Flood Risk Assessment"Flood Risk Assessment><img  src="../static/img/logo3.jpg" /></a>
+					<span><h2>Flood Risk Assessment</h2>
+					Two days Workshop on Flood Risk Assessment to be organized for the NWG member in CDA Islamabad. Detail Information and agenda will be available soon...</span>
+				</li>
+				<li>
+					<a href="#" title="Meeting on Risk Assessment Project"><img src="../static/img/logo1.jpg" /></a>
+					<span><h2>Meeting on Risk Assessment Project</h2>
+					Meeting was organized between NDMA, World Bank, CDA and Network of Disaster Management 
+					Practitioners (Pvt.) Ltd on Risk Assessment Project and involvement of CDA as NWG member. </span>
+				</li>
+					<li>
+					<a href="#" title="Meeting"><img src="../static/img/logo1.jpg" /></a>
+					<span><h2>Meeting</h2>
+					Meeting has been planned during Feb between NDMA, GSP, PMD, SUPARCO, WB and Network of Disaster Managment Priv PVT LTd to nominate focal persons for the risk assessment project and active involvement of the se organizations during the project phase.</span>
+				</li>
+			</ul>
+		</div>
+		</div>
+						
+		 <!-- Rightmen News--> 
+		
+		</div>   
+        <div class="intro">
+     <!--   <div id="mainslider">
+		<div id="mask">
+			<ul>
+				<li>
+					<a href="#" title=""><img src="../static/img/logo1.jpg" /></a>
+					<span><h2>Disaster Info</h2>
+						Pakistan Disaster Info is a nationally owned, 
+						open source data platform that aims to enable the 
+						mandated agencies to share their geospatial datasets and maps on 
+						hazards and exposure. In order to ensure that risk information is 
+						widely accessible to all decision makers, this platform will also host 
+						newly developed datasets, hazard and risk information.
+         			</span>
+				</li>
+				<li>
+					<a href="#" title=""><img src="../static/img/logo2.jpg" /></a>
+					<span><h2>Development of a National Platform for Risk Assessment and Catastrophe risk financing Programme in Pakistan</h2>
+					This project is being supported by the World Bank under the 
+					Development of a National Platform for Risk Assessment and Catastrophe risk financing Programme in 
+					Pakistan which aims to implement risk identification and financing 
+					framework that will encourage data-driven analysis and lead to a reduction in 
+					disaster risk over the long term.
+					</span>
+				</li>
+				<li>
+					<a href="#" title=""><img src="../static/img/logo3.jpg" /></a>
+					<span><h2>Evidence-based Risk Analysis</h2>
+					The programme will test the use of evidence-based risk analysis in public policy 
+					making through a series of interventions to 
+					(i) provide risk information,
+					(ii) train users, and 
+					(iii) Improve decision-making systems in disaster risk management. </li>
+					</span>
+				</li>
+				<li>
+					<a href="#" title="View my second image link"><img src="../static/img/logo4.jpg" /></a>
+					<span><h2>National Working Group</h2>
+					National Working Group on Vulnerability and Risk Assessment is constituted by NDMA to provide strategic guidance and to coordinate all activities related to vulnerability and risk assessment in the country. The purpose of the National Working Group is to ensure the consistency in methodologies employed for disaster risk assessments, uniformity in data format during collection process, and coordinating risk assessments efforts to ensure no gaps exist and to avoid overlapping of efforts.
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div id="progress">
+		</div>
+	</div>
+      -->
+<div id="sliderFrame">
+        <div id="slider">
+          <!--  <a href="http://www.menucool.com/javascript-image-slider" target="_blank"> -->
+                <img src="../static/img/mainslider/images/logo1.jpg" alt="#htmlcaption1" />
+            </a>
+            <img src="../static/img/mainslider/images/logo2.jpg" alt="#htmlcaption2" />
+            <img src="../static/img/mainslider/images/logo3.jpg" alt="#htmlcaption3" />
+            <img src="../static/img/mainslider/images/logo4.jpg" alt="#htmlcaption4" />
+            <img src="../static/img/mainslider/images/logo5.jpg" alt="#htmlcaption5"/>
+			<img src="../static/img/mainslider/images/logo6.jpg" alt="#htmlcaption6"/>
+        </div>
+		 <div id="htmlcaption1" style="display: none;">
+            <span>
+		   <h2>National Working Group</h2>
+		  
+					National Working Group on Vulnerability and Risk Assessment is constituted by NDMA to provide strategic guidance and to coordinate all activities related to vulnerability and risk assessment in the country. The purpose of the National Working Group is to ensure the consistency in methodologies employed for disaster risk assessments, uniformity in data format during collection process, and coordinating risk assessments efforts to ensure no gaps exist and to avoid overlapping of efforts.
+			</span>		
+        </div>
+		<div id="htmlcaption2" style="display: none;">
+            <span>
+		   <h2>Disaster Info</h2>
+		  
+					
+        		Pakistan Disaster Info is a nationally owned, open source data platform that aims to 
+        		enable the mandated agencies to share their geospatial datasets and maps on hazards and 
+        		exposure. In order to ensure that risk information is widely accessible to all decision makers,
+        		 this platform will also host newly developed datasets, hazard and risk information.
+            For more information visit  <a href="http://ndma.gov.pk/"> National Disaster Management Authority</a>
+			</span>		
+        </div>
+		<div id="htmlcaption3" style="display: none;">
+            <span>
+		   <h2>Development of a National Platform for Risk Assessment and Catastrophe risk financing Programme in Pakistan</h2>
+		  
+				
+					This project is being supported by the World Bank under the <i> Development of a National Platform for Risk Assessment and Catastrophe risk financing Programme in 
+					Pakistan</i> which aims to implement risk identification and financing 
+					framework that will encourage data-driven analysis and lead to a reduction in 
+					disaster risk over the long term.
+					
+			</span>		
+        </div>
+		
+		<div id="htmlcaption4" style="display: none;">
+            <span>
+		  <h2>Evidence-based Risk Analysis</h2>
+		  
+				
+					The programme will test the use of evidence-based risk analysis in public policy 
+					making through a series of interventions to <br>
+					(i) provide risk information,<br>
+					(ii) train users, and <br>
+					(iii) Improve decision-making systems in disaster risk management. 
+			</span>		
+        </div>
+		
+		<div id="htmlcaption5" style="display: none;">
+            <span>
+		   <h2>Disaster Info</h2>
+		  
+					
+        		Pakistan Disaster Info is a nationally owned, open source data platform that aims to 
+        		enable the mandated agencies to share their geospatial datasets and maps on hazards and 
+        		exposure. In order to ensure that risk information is widely accessible to all decision makers,
+        		 this platform will also host newly developed datasets, hazard and risk information.
+            For more information visit  <a href="http://ndma.gov.pk/"> National Disaster Management Authority</a>
+			</span>		
+        </div>
+		<div id="htmlcaption6" style="display: none;">
+            <span>
+		   <h2>Disaster Info</h2>
+		  
+					
+        		Pakistan Disaster Info is a nationally owned, open source data platform that aims to 
+        		enable the mandated agencies to share their geospatial datasets and maps on hazards and 
+        		exposure. In order to ensure that risk information is widely accessible to all decision makers,
+        		 this platform will also host newly developed datasets, hazard and risk information.
+            For more information visit  <a href="http://ndma.gov.pk/"> National Disaster Management Authority</a>
+			</span>		
+        </div>
+    </div> 
+     		<span>
+        		Pakistan Disaster Info is a nationally owned, open source data platform that aims to 
+        		enable the mandated agencies to share their geospatial datasets and maps on hazards and 
+        		exposure. In order to ensure that risk information is widely accessible to all decision makers,
+        		 this platform will also host newly developed datasets, hazard and risk information.
+            For more information visit  <a href="http://ndma.gov.pk/"> National Disaster Management Authority</a>.
+           
+            <span>
+            This project is being supported by 
+            <a href="https://www.gfdrr.org/">Global Facility for Disaster Reduction and Recovery (GFDRR)</a>,  World Bank and Department for International Development (DFID)
+  	 under the <i>Development of a National Platform for Risk Assessment and Catastrophe risk financing Programme in Pakistan</i> which aims to 
+        		implement risk identification and financing framework that will encourage data-driven analysis 
+        		and lead to a reduction in disaster risk over the long term.
+           </span>
+           <span>
+           The programme will test the use of evidence-based risk analysis in public policy 
+           making through a series of interventions to 
+           <ol><li>Povide risk information, </li>
+           <li>  Train users, and </li>
+           <li> Improve decision-making systems in disaster risk management.</li></ol>
+           </span>
+	</div>   
+        	
+        
+    	</div>
+    	
+     </div>
+ 
+{% endblock %}
+  {% block mainbody %}
+  
+ 
+  <div class="row">
+    <div class="linksicon">
+	            	<div class="title1">
+            	
+            		<!--Useful Links -->
+            	</div>
+            	<ul class="ullist">
+<a href="http://www.ndma.gov.pk/" target="_blank"><li><img src="../static/img/logos/ndma.png" title="National Disaster Management Authority"></li></a>
+<a href="http://www.worldbank.org/" target="_blank"><li><img src="../static/img/logos/WB.gif" title="World Bank"></li></a>
+
+<a href="http://fdma.gov.pk/" target="_blank"><li><img src="../static/img/logos/FDMA.png" title="FATA Disaster Management Authority"></li></a>
+<a href="http://sdma.ajk.gov.pk/" target="_blank"><li><img src="../static/img/logos/SDMA.png" title="State Disaster Management Authority"></li></a>
+<a href="http://www.gilgitbaltistan.gov.pk/" target="_blank"><li><img src="../static/img/logos/Gov.png" title="Gilgit Baltistan Disaster Management Authority"></li></a>  
+
+<a href="http://www.pdma.gob.pk" target="_blank"><li> <img src="../static/img/logos/PDMABN.png" title="Provincial Disaster Management Authority Balochistan"></li></a>
+<a href="http://pdma.gov.pk/" target="_blank"><li><img src="../static/img/logos/PDMAKP.jpg" title="Provincial Disaster Management Authority Khybar Pakhtunkwa"></li></a>
+<a href="http://pdma.gop.pk/" target="_blank"><li><img src="../static/img/logos/PDMAPB.png" title="Provincial Disaster Management Authority Punjab"></li></a>
+<a href="http://pdma.gos.pk/dn/" target="_blank"><li><img src="../static/img/logos/PDMASD.png" title="Provincial Disaster Management Authority Sindh"></li></a>
+
+<a href="http://www.suparco.gov.pk" target="_blank"><li><img src="../static/img/logos/SUPARCO.png" title="Space and Upper Atmosphere Research Commission (SUPARCO)"></li></a>
+<a href="http://www.pmd.gov.pk/" target="_blank"><li> <img src="../static/img/logos/pmd.png" alt="Pakistan Meteorological Department (PMD)" title="Pakistan Meteorological Department (PMD)"></li></a>
+<a href="http://surveyofpakistan.gov.pk/" target="_blank"><li><img src="../static/img/logos/sop.png" title="Survey of Pakistan"></li></a>
+<a href="http://www.gsp.gov.pk/" target="_blank"><li><img src="../static/img/logos/gsp.gif" title="Geological Survey of Pakistan"></li></a>
+
+
+<a href="http://www.wapda.gov.pk" target="_blank"><li> <img src="../static/img/logos/WAPDA.jpg" title="Water & Power Development Authority"></li></a>
+<a href="http://www.ffc.gov.pk/" target="_blank"><li> <img src="../static/img/logos/Gov.png" title="Federal Flood Commission"></li></a>
+<a href="http://www.environment.gov.pk/" target="_blank"><li><img src="../static/img/logos/Gov.png" title="Climate Change & Environment"></li></a>
+<a href="http://www.mocc.gov.pk/" target="_blank"><li><img src="../static/img/logos/Gov.png" title="Ministry of Climate Change"></li></a>
+<a href="http://www.housing.gov.pk/" target="_blank"><li> <img src="../static/img/logos/Gov.png" title="Ministry of Housing & Works"></li></a>
+<a href="http://www.pakistanarmy.gov.pk/" target="_blank"><li> <img src="../static/img/logos/GHQ.png" title="Engineer Directorate Pak Army"></li></a>
+<a href="http://www.mnfsr.gov.pk/" target="_blank"><li> <img src="../static/img/logos/Gov.png" title="Ministry of National Food Security & Research (MNFSR)"></li></a>
+<a href="http://www.mod.gov.pk/" target="_blank"><li> <img src="../static/img/logos/Gov.png" title="Ministry of Defense"></li></a>
+<a href="http://www.pakistan.gov.pk/" target="_blank"><li> <img src="../static/img/logos/Gov.png" title="Planning & Development Division"></li></a>
+                     
+                    	
+                        
+                   
+                          	                   	
+<a href="http://www.pec.org.pk/?" target="_blank"><li><img src="../static/img/logos/PEC.gif" title="Pakistan Engineering Council"></li></a>
+<a href="http://www.nust.edu.pk/" target="_blank"><li> <img src="../static/img/logos/NUST.png" title="National University of Sciences &amp Technology"></li></a>
+<a href="http://nceg.upesh.edu.pk" target="_blank"><li> <img src="../static/img/logos/NCEG.jpg" title=":: National Centre of Excellence in Geology (NCEG)"></li></a>
+
+<a href="http://www.jica.go.jp/english/?" target="_blank"><li><img src="../static/img/logos/JICA.png" title="Japan International Cooperation Agency"></li></a>
+<a href="http://www.nespak.com.pk/" target="_blank"><li><img src="../static/img/logos/NESPAK.jpg" title="National Engineering Services Pakistan (Pvt) Limited"></li></a>   
+                </ul>
+       </div>
+         
+      
+    
+  </div>
+   
+ 
+   
+ <div class="container">
+	
+		 
+    <div class="row">
+    
+     <div class="span4">
+       <div class="box">
+       <h2>About The Project</h2>
+       				<ul>
+						<a href="{% url "project" %}"> <li>{% trans "Home" %}</li></a>         
+						 <a href="{% url "project" %}"> <li>{% trans "Risk Assessment of Pakistan" %}</li></a>          
+						 <a href="{% url "project" %}"> <li>{% trans "Risk Assessment of Islamabad" %}</li></a>			
+						 <a href="{% url "project" %}"> <li>{% trans "Development of Geospatial Paltform" %}</li></a>
+						 <a href="{% url "project" %}"> <li>{% trans "Capacity Building of NWG" %}</li></a>
+						 </ul>
+					       
+       </div>
+    </div>
+     <div class="span4">  
+      <div class="box">
+        <h2>About the Platform</h2> <ul>
+        				<a href="{% url "message" %}"> <li>{% trans "About Chairman" %}</li></a>         
+						 <a href="{% url "nwg" %}"> <li>{% trans "National Working Group" %}</li></a>          
+						 <a href="{% url "contact" %}"> <li>{% trans "Contact Us" %}</li></a>
+						 <a href="{% url "feedback" %}"> <li>{% trans "Feedback" %}</li></a>
+        				 </ul>
+					
+      </div>
+      
+    </div>
+     <div class="span4"> 
+        <div class="box">
+  <h2>National Working Group</h2>   <ul>
+  						<a href="{% url "nwg" %}"> <li>{% trans "Home" %}</li></a>         
+						 <a href="{% url "nwg" %}"> <li>{% trans "National Working Group on Risk Assessment" %}</li></a>          
+						 <a href="#"> <li>{% trans "Sub Groups on Risk Assessment" %}</li></a>			
+							  {% if user.is_authenticated %}
+                    <a href="{% url "profile_browse" %}"><li>{% trans "Member Profile" %}</li></a>
+                    {% else %}
+                     <a href="#"><li>{% trans "Member Profile" %}</li></a>  
+                    {% endif %}						
+						</ul>
+					     
+        </div>
+    </div>
+    </div>    
+    </div>
+    
+{% endblock %}
+  

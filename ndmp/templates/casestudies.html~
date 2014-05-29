@@ -1,0 +1,72 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Case Studies" %} - {{ block.super }} {% endblock %}
+
+{% block body %} 
+  <header class="jumbotron subhead" id="overview">
+    <h2>{% trans "Selected Case Studies" %}</h2>
+  </header>
+
+  {% blocktrans %}
+
+<p>
+Collecting and communicating risk information in a simple way is a first essential step in supporting government officials, communities, and individuals in their efforts to manage the risks they face. These case studies has been taken from some of the developmental interventions by World Bank Group in different countries in order to better understand and manage disaster and climate risk. 
+<h5 id="Nepal">Nepal</h5><p>
+Nepals Kathmandu Valley is one of the most seismically at-risk places in the world. A combination of poor construction practices and a history of governance challenges have left the country extremely vulnerable to earthquakes and other hazards. The World Bank is launching seismic risk reduction activities aimed at retrofitting schools, health facilities, and government buildings in the Kathmandu Valley. OpenDRI will support risk assessment activities planned for 2013 to help prioritize these investments through community mapping activities and the opening of existing risk information. Currently, in Nepal there is strong capacity within the university system, certain government ministries and civil society organizations like the National Society for Earthquake Technology (NSET) and the International Centre for Integrated Mountain Development (ICIMOD), to champion open data efforts and provide technical assistance related to data management. Nonetheless, weak data sharing arrangements have frequently been cited in meetings with relevant stakeholders as a significant impediment to producing high quality risk assessments. Consequently, a number of institutions in Nepal have expressed strong interest in participating in a project that would increase access to these existing risk datasets. OpenDRI, in partnership with the Ministry of Home Affairs (MoHA) and the Asian Disaster Preparedness Center (ADPC), will launch an open data platform to host gathered or produced data as part of the 2010 multi-hazard risk assessment conducted by the country. MoHa will receive training on the use and maintenance of the platform. These activities will be conducted in tandem with targeted outreach to local critical institutions and data-holders to assess capacity and participation interest in a broad-based open data commitment, to become effective in 2013.<br> <a href="http://opencitiesproject.com/casestudy/schools/">Read more..</a>
+
+
+<h5 id="SriLanka"> Sri Lanka</h5><p>
+
+In Sri Lanka, natural disasters, such as floods and landslide, cause significant damage to properties and infrastructure. However, the country has not had sufficient policy backing to integrate disaster risk reduction into settlement planning, infrastructure development and other development interventions. As a result, thousands of people settle annually in highly vulnerable areas. Assisted by advancements in risk assessment and the generation of risk information, the Sri Lankan government is in the process of formulating policies to integrate risk reduction concerns into the development planning portfolio. Nonetheless, there are still no knowledge-sharing platforms in place to take risk information to development planners. Consequently, OpenDRI is partnering with the government of Sri Lanka to develop a long-term institutional strategy towards the creation, maintenance, and opening of disaster risk information. So far, progress has been made by organizing a series of meetings, video conferences and workshops to discuss open data. Additionally, training sessions on GeoNode, InaSafe, and community mapping are underway. The OpenDRI team is also supporting the creation of an open disaster data working group and launching spatial data sharing platforms within the Disaster Management Center and the Urban Development Authority to help ensure that risk information collected or created through DRM programs is widely available. Finally, the city of Colombo has been selected as one of the pilot cities for the regional Open Cities project. Community mapping activities in Metropolitan Colombo began in December 2012. <br><a href="http://opencitiesproject.com/casestudy/energy/"> Read more..</a>
+<h5 id="Bangladesh"> Bangladesh</h5><p>
+
+Bangladesh is a densely populated and low-lying country exposed to cyclone, flood, tsunami and seismic hazard. The World Bank Bangladesh DRM program launched a large risk identification and mitigation program in October 2012. A key component of the program will be the development of risk information sharing program and platform to be supported technically and institutionally by OpenDRI. The platform will initially be used to share and visualize detailed asset data collected for Dhaka as part of recent risk assessment activities. The OpenDRI team is also partnering with the Bangladesh OpenStreetMap community to collect information on evacuation routes and vulnerable buildings in the densely settled and at-risk sections of the Old City of Dhaka.
+<br><a href="http://opencitiesproject.com/casestudy/building-use/"> Read more..</a>
+
+<h5 id="Indonesia"> Indonesia</h5><p>
+
+Indonesia is exposed to a wide range of disasters including large magnitude earthquakes, tsunamis, volcanic eruptions and floods. These events have caused significant human and economic impacts, ranking Indonesia 12th among the top 35 countries that have high mortality risk from multiple hazards. Indonesias National Agency for Disaster Management (BNPB) officially launched the InaSafe software platform at the Fifth Asian Ministerial Conference on Disaster Risk Reduction (AMCDRR), October 24, 2012. This open source disaster impact modeling tool was developed in partnership with the BNPB, the Australia-Indonesia Facility for Disaster Reduction (AIFDR), GFDRR, and the World Bank EAP Disaster Risk Management team through the AusAID-EAP Infrastructure for Growth Trust Fund (EAAIG). BNPB is using InaSafe to support emergency contingency planning in high-risk provinces and districts. As part of the InaSafe approach to developing contingency planning and preparedness scenarios, OpenStreetMap tools are used to develop high-resolution baseline data on critical infrastructure. The collected information was analyzed using InaSafe during the 2012 Jakarta flood contingency planning and can be openly accessed and used for future emergency planning exercises. Across Indonesia, nearly a million buildings have been mapped in the OpenStreetMap platform and can be incorporated into the InaSafe preparedness analysis set. Customized resources are being developed and supported by the Humanitarian OpenStreetMap Team (HOT) and AusAID-AIFDR to increase communitybuilding and beginner/intermediatelevel training in Bahasa, Indonesias official language. Related to the OpenStreetMap activities, the World Bank-GFDRR has started a policy dialog with the Indonesias national mapping agency, Geospatial Information Agency (BIG), to integrate elements of open data and participatory mapping into Indonesias Geoportal. A senior government official presented these experiences at the Open Data session of the Understanding Risk (UR) Forum 2012 in Cape Town, South Africa.
+
+<br><a href="http://geospasial.bnpb.go.id/"> Read more..</a>
+
+<h5 id="Mozambique"> Mozambique</h5><p>
+
+Mozambiques geographic position, location and size make it exposed to extensive flood hazards and intense cyclones and windstorms. Long, severe droughts mobilize national and international attention. Historical data on disaster events shows that Mozambique suffered 62 major events in 51 years (1957- 2008), i.e., 1.2 events per year on average (INGC, 2009). Influenced by these statistics, Mozambiques national disaster management agency, The Instituto Nacional de Gestão das Calamidades (INGC), in collaboration with the World Bank and the GFDRR, has developed sustainable OpenDRI work plan currently under implementation. In 2012, GFDRR Labs conducted on-site training for their GeoNode instance, Moz-Adapt, available in both English and Portuguese.
+Training included spatial data uploading and updating, map creation using existing layers, map
+sharing and other technical site management aspects. The training also focused on helping local
+programmers prepare GeoNode site launches and planning for the publication of a highly tailored and localized training manual. Community-building and outreach activities have taken place with the National Water Directorate (DNA) team to discuss the site and ways it could provide ready access to a centralized data repository for INGC partners. Participants are keen to utilize the site and rally the support of other regional offices that have other data repositories and are at the forefront of emergency responses. Further regional training and promotional and communication dissemination strategies are being planned with data contributors, partners and district directors.
+
+<br><a href="http://moz-adapt.org/"> Read more..</a>
+
+
+<h5 id="Bolivia"> Bolivia</h5><p>
+
+
+For several decades, Bolivia has been victim to disasters caused by nature and mans intervention. To alleviate this national challenge, the Bolivian Ministry of Defense, through its Vice Ministry of Civil Defense (VIDECI), is leading the National Strategic Agenda for Disaster Risk Management, whose fundamental pillar is the promotion of a culture of prevention through educational and capacity building strategies on risk assessment and reduction. Membership to this comprehensive national strategy includes Bolivian federal and local authorities, research institutes and universities, international organizations, NGOs, civil society and the private sector. As part of this national DRM strategy, The World Bank and VIDECI are collaborating on the development of SINA GER, an integrated system for disaster risk management. The platform has a geospatial component called GeoSINA GER, a GeoNode-based open source software. The project involves building capacity at the agency level and installing GeoNode in various Bolivian ministries and institutions to promote local ownership and data exchange. Five of these GeoNodes have already been installed and are operational in the Ministries of Health, Civil Defense, Geology and Mining and in the Geography Military Institute. GeoSINA GER is also working closely with GeoBOLIVIA, the countrys Spatial Data Infrastructure (SDI) program, to ensure bi-directional data flow between systems. There is an interesting synergy between these two platforms due to the utilization of Open Geospatial Consortium standards and architectures, based on Europes INSPIRE directive. The Andean committee for disaster awareness and prevention, Comité Andino para la Prevención y Atención de Desastres (CAPRADE), is looking to the Bolivian experience to decide how to organize its own risk data; the Bolivian SDI will be instrumental in their process. In November 2012, VIDECI and the United Nations Development Programme (UNDP Bolivia) in La Paz hosted their first national Disaster Risk Information Collection and Integration Capacity Building Workshop, an advanced GeoNode training workshop and technical dialogue for the usage and construction of GeoSINA GER. OpenDRI led the hands-on workshop tailored for government agencies, scientific institutions and technical experts. VIDECIs growth plan is to implement GeoNodes across all decentralized governmental agencies so everyone can visualize risk information. Aside from the current six GeoNode installations that currently exist in different government agencies, 20 more are planned to be installed in 2013, and eventually throughout nine of their largest ministries. Beyond implementing at the federal level, they are also planning municipal-level implementations; La Paz itself has 337 municipalities. Their vision is to extend to at least 18 municipalities in the next two to three years. Lastly, they appreciate the need to promote this work at all levels in order to foster national enthusiasm and engagement, so plans for community engagement are also underway.
+
+<br><a href="http://geosinager.defensacivil.gob.bo/"> Read more..</a>
+
+
+
+ 
+
+  {% endblocktrans %} 
+{% endblock %}
+
+{% block sidebar %}
+  <ul class="nav nav-list">
+    <li class="nav-header">{% trans "Sections" %}</li>
+ {% if DOCUMENTS_APP %}
+                  <li id="nav_documents">
+                    <a href="{% url "documents_browse" %}">{% trans "Case Studies Documents" %}</a>
+                  </li>
+                  {% endif %}
+    <li><a href="#Nepal">{% trans "Nepal" %}</a></li>
+    <li><a href="#SriLanka">{% trans "Sri Lanka" %}</a></li>
+    <li><a href="#Bangladesh">{% trans "Bangladesh" %}</a></li>
+    <li><a href="#Indonesia">{% trans "Indonesia" %}</a></li>
+<li><a href="#Mozambique">{% trans "Mozambique" %}</a></li>
+<li><a href="#Bolivia">{% trans "Bolivia" %}</a></li>
+   </ul>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Feedback" %} — {{ block.super }} {% endblock %}
+
+{% block body %}
+   {% blocktrans %}
+   
+  <h4>Feedback</h4>
+<div class="span8">
+ <p style=" text-align: justify; ">
+ <form id="myform" method="POST" action="">
+			<fieldset>
+            <legend></legend>
+
+				<table width="90%" border="0" cellpadding="5" cellspacing="0">
+			
+				<tbody><tr>
+					<td width="15%"><label>Name:</label></td>
+					<td width="30%"><input type="text" name="txtname" size="30" class="required"></td><td></td>
+				</tr>
+				<tr>
+					<td><label>Phone:</label></td>
+					<td><input type="text" name="phone" size="30" class="required"></td><td></td>
+				</tr>
+				<tr>
+					<td><label>Email:</label></td>
+					<td><input type="text" name="email" size="30" class="required"></td><td></td>
+				</tr>
+
+				<tr>
+					<td valign="TOP"><label>Comments:</label></td>
+					<td colspan="2"><textarea cols="43" rows="10" name="comment" style="margin: 2px; height: 167px; width: 361px;"></textarea></td>
+				</tr>
+				
+				
+				<tr>
+                  <td>
+<!--                  <button onclick="event.preventDefault(); parent.$.fancybox.close();"><span>Save</span></button>-->
+				</td>  
+					<td colspan="2"><button id="send" name="fsend" value="Send Message">Send</button></td>
+				</tr>
+
+				</tbody></table>	
+				</fieldset>
+                                  <span id="fname" style="display : none">feedback-submit.asp</span>
+                                   <span id="formType" style="display : none">feedback</span>
+                                  <span id="formURL" style="display : none"></span>
+                
+                
+				</form>
+  
+  </p>
+
+   </div> 
+{% endblocktrans %}
+{% endblock %}
+
+{% block sidebar %}
+	<div class="rightmenu">
+						<h1> Main menu</h1>
+						<ul>
+						<a href="{% url "home" %}"> <li>{% trans "Home" %}</li></a>         
+						 <a href="{% url "nwg" %}"> <li>{% trans "National Working Group" %}</li></a>          
+						 <a href="{% url "riskinfo" %}"> <li>{% trans "Risk Assessment" %}</li></a>			
+						 <a href="{% url "casestudies" %}"> <li>{% trans "Case Studies" %}</li></a>
+						 <a href="{% url "contact" %}"> <li>{% trans "Contact Us" %}</li></a>
+						
+								</ul>
+		</div>
+
+ {% endblock %}

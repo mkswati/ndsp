@@ -1,0 +1,54 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "About the Project" %} - {{ block.super }} {% endblock %}
+
+{% block body %} 
+  <header class="jumbotron subhead" id="overview">
+  
+ 
+    <h5 id="About">{% trans "About the Project" %}</h5>
+  </header>
+
+  {% blocktrans %}
+
+  <p style=" text-align: justify; "> 
+  Pakistan is vulnerable to a number of adverse natural events and has experienced a wide range of disasters in the past 40 years, including earthquakes, cyclones, tsunamis, floods and droughts. These hazards are further exacerbated due to growing urbanization and shifting climatic patterns, resulting in extreme and unpredictable weather events. Over the past decade, damages and losses resulting from natural disasters have exceeded US$ 18 billion.  The Bank is supporting the Government of Pakistan in building capacity in the area of Disaster Risk Management (DRM) in order to build resilience from both humanitarian and fiscal shocks associated with natural disasters. The project aims to support the National Disaster Management Authority (NDMA) and other key government counterpart agencies in developing a national risk assessment platform and recommendations for a comprehensive approach to financing disaster risk. The project will test the use of evidence-based risk analysis in public policy making through a series of interventions to provide physical and fiscal risk information, train users, and develop risk financing strategies.  The project comprises of the following components: 
+	<ol>
+	<li>Systematic measurement of disaster losses.</li>
+	<li>Establishment of a national platform on risk identification.</li>
+	<li>Capacity development & implementation of natural hazard risk modeling at national and city scales. </li>
+	<li>Appropriate tools and information repositories to share datasets and final results and information. </li>
+	<li>Risk Financing.</li> 
+
+
+	</ol>  
+	
+  <h5 id="assessment" >Risk Assessment of Pakistan </h5>
+<img src="../static/img/pakmap.png" style="float: right; ">
+ <p style=" text-align: justify; ">The hazards faced by Pakistan are exacerbated due to growing urbanization and shifting climatic patterns, resulting in extreme and unpredictable weather events. Numerous studies have been conducted for vulnerability assessment and hazard assessment in Pakistan, These risk assessments have been done for different parts of the country on different scale ranging from union council level risk assessment to city level risk assessment,  In order to make to have a country level comprehensive risk assessment a need was felt by the National Disaster Management Authority to bring all those risk assessment studies into a centralize platform where National Working Group members and other relevant authorities can share their risk assessment results, benefit from already conducted risk assessment and contribute to country level risk assessment. </p>
+
+
+<h5 id="nwg">National Working Group</h5>
+<p style=" text-align: justify; ">
+The National Working Group on Vulnerability and Risk Assessment is constituted by NDMA to provide strategic guidance and to coordinate all activities related to vulnerability and risk assessment in the country. The purpose of the National Working Group is to ensure the consistency in methodologies employed for disaster risk assessments, uniformity in data format during collection process, and coordinating risk assessments efforts to ensure no gaps exist and to avoid overlapping of efforts. Another purpose of the National Working Group is to provide guidance for development of National Platform for Data Sharing for Disaster Risk Management by the NDMA, with the World Banks support. 
+<p style=" text-align: justify; "> A formal notification was issued by NDMA for the incorporation of National Working Group on Vulnerability & Risk Assessment on September 28, 2012. The group includes members from various government and non-government agencies/organizations, under the chairmanship of Chairman NDMA. The National Working Group has already met twice, and has constituted four (4) subject-specific Technical Sub-groups to lead and coordinate the efforts for earthquake hazard, flood hazard, exposure, and vulnerability & risk communication.
+<p style=" text-align: justify; ">Due to increasing levels of disaster risk in Pakistan, the awareness and understanding of risk among individuals and their coordination for dissemination of information has to be strengthen, In this regard as continuation of the capacity building of national working group members,  three trainings workshops have been conducted with support from the World Bank, First training workshop was on Hazard, Risk, Exposure and Vulnerability, The second training was on Flood Modelling and the third training was on Earthquake Modelling. All these trainings have been delivered by national and international experts of the field. More training on the use of Disasterinfo Platform are scheduled for national working group members.
+
+<span class="anchor" id="platform"></span>
+<h5>Development of Geospatial Platform</h5>
+
+<p style=" text-align: justify; ">Keeping the reoccurrence of different kind of hazards like flood, earthquake and drought, the need was felt to analyze the pattern, mode of recurrence, onslaught time and other parameters of these hazards against the vulnerability, exposure and risk.  To look deep into the previous disasters a retrospective inspection of events has to be mapped. The centralized platform was recommended where all the previous data present with national working group has to be shared to each other for authenticity and then to be used for analysis and futuristic scenario modeling.  Disasterinfo is a  geospatial platform which will enable the national working group members to share their respective data while applying their data security protocols as per their organization policies. Disasterinfo is a data sharing platform where organizations can share their data and utilize other organizations data for analytical purposes. 
+  {% endblocktrans %} 
+{% endblock %}
+
+{% block sidebar %}
+  <ul class="nav nav-list">
+ 
+    <li class="nav-header" >{% trans "Sections" %}</li>
+    <li><a href="#About">{% trans "About the Project" %}</a></li>
+     <li><a href="#assessment" >{% trans "Risk Assessment of Pakistan" %}</a></li>
+    <li><a href="#nwg">{% trans "National Working Group" %}</a></li>
+    <li><a href="#platform">{% trans "Development of Geospatial Platform" %}</a></li>
+   </ul>
+{% endblock %}

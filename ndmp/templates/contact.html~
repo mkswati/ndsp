@@ -1,0 +1,44 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "National Working Group" %} — {{ block.super }} {% endblock %}
+
+{% block body %}
+   {% blocktrans %}
+   
+  <h4>Contact Us</h4>
+
+ 
+<div class="span8">
+<p>		
+		Prime Minister's Office 2nd Floor <br>
+		Sector G-5-1, Constitution Avenue<br> Islamabad <br>
+		Post Code 44000<br>
+		e-mail: info@ndma.gov.pk<br>
+		
+		UAN#: 051-111-157-157<br>
+		Tel#: +92 51 9205037<br>
+		Fax#: +92 51 9205086 <br>
+		 </p>
+		</div> 
+ 		<div class="span4">
+ 		
+ 		</div>
+  
+{% endblocktrans %}
+{% endblock %}
+
+{% block sidebar %}
+	<div class="rightmenu">
+						<h1> Main menu</h1>
+						<ul>
+						<a href="{% url "home" %}"> <li>{% trans "Home" %}</li></a>         
+						 <a href="{% url "nwg" %}"> <li>{% trans "National Working Group" %}</li></a>          
+						 <a href="{% url "riskinfo" %}"> <li>{% trans "Risk Assessment" %}</li></a>			
+						 <a href="{% url "casestudies" %}"> <li>{% trans "Case Studies" %}</li></a>
+						 <a href="{% url "contact" %}"> <li>{% trans "Contact Us" %}</li></a>
+						
+								</ul>
+		</div>
+
+ {% endblock %}

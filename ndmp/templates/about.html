@@ -1,0 +1,29 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "About the Project" %} — {{ block.super }} {% endblock %}
+
+{% block body %}
+  <header class="jumbotron subhead" id="overview">
+    <h1>{% trans "Probabilistic Seismic and Flood Risk Assessment" %}</h1>
+    <p class="lead">{% trans "in collaboration with the Pakistan National Working Group on Risk Assessment" %}</p>
+  </header>
+
+  {% blocktrans %}
+  <p> This project is being supported by the World Bank under 
+  the Up scaling Innovation in Disaster Risk Management 
+  Programme in Pakistan which aims to implement risk 
+  identification and financing framework that will encourage data-driven 
+  analysis and lead to a reduction in disaster risk over the long term.</p>
+	<p>The programme will test the use of evidence-based risk analysis in public policy 
+	making through a series of interventions to
+.
+<ul>
+    <li>Provide risk information</li>
+    <li>Train users,</li>
+    <li>Re-design decision-making systems in disaster risk management</li>
+     </ul>
+</p>
+{% endblocktrans %}
+{% endblock %}
+

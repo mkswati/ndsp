@@ -1,0 +1,58 @@
+{% extends "layers/layer_base.html" %}
+{% load i18n %}
+{% load layers_tags %}
+{% load pagination_tags %}
+{% load taggit_extras %}
+{% load staticfiles %}
+{% load url from future %}
+
+{% block title %} {% trans "Create New Maps" %} - {{ block.super }} {% endblock %}
+
+{% block body_class %}data data-list explore{% endblock %}
+
+{% block body %}
+  <div class="span12">
+<a href="{% url "new_map" %}" class="btn btn-mini btn-primary pull-right strong">{% trans "Create a New Map" %}</a>
+    <h2 class="page-title">{% trans "Create Maps" %}</h2>
+Overlay different map layers to get a more complete picture
+  </div>
+  <div class="span8 filter">      
+    {% include "search/_sort_filters.html" %}
+  </div>
+  <div class="span4">
+    <div class="pull-right" data-viewby="list">
+    {% include "_viewby.html" %}
+    </div>
+  </div>
+  <div class="span12">
+    <div class="row" id="contain-slider">
+      <div class="span4">
+        <div class="selections">
+          <h4>
+            {% trans "Your selections" %}
+            <a href="." id="clear-search" class="pull-right">Clear all</a>
+          </h4>
+        </div>
+        <div id="slide-pane">
+          <a href="#" class="toggle toggle-pane"><i class="icon-chevron-left"></i></a>
+          {% with type='layer' %}
+	  {% if user.is_authenticated %}
+          {% include "search/_layertype_filters.html" %}
+	  {% endif %}
+          {% include "search/_general_filters.html" %}
+          {% endwith %}
+        </div>
+      </div>
+      <div class="tab-content paginate paginate-auto" id="search-content">
+        {% include 'search/search_content.html' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block extra_script %}
+  <script type="text/javascript">
+  var default_type = 'layer';
+  </script>
+  {% include 'search_scripts.html' %}
+{% endblock extra_script %}

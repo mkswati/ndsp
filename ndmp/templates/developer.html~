@@ -1,0 +1,92 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "National Working Group" %} — {{ block.super }} {% endblock %}
+
+{% block body %}
+   {% blocktrans %}
+   
+  <h2>National Working Group</h2>
+
+  <p>
+National Working Group on Vulnerability and Risk Assessment is constituted by NDMA
+ to provide strategic guidance and to coordinate all activities related to vulnerability 
+ and risk assessment in the country.  
+  </p>
+
+  <p>
+  The purpose of the National Working Group is to ensure the consistency 
+  in methodologies employed for disaster risk assessments, uniformity in data 
+  format during collection process, and coordinating risk assessments efforts to 
+  ensure no gaps exist and to avoid overlapping of efforts. Another purpose of the 
+  National Working Group is to provide guidance for development of National 
+  Platform for Data Sharing for 
+  Disaster Risk Management by the NDMA, with the World Banks support. 
+   </p>
+   <p>
+   A formal notification was issued by NDMA for the incorporation of National Working Group on Vulnerability & Risk Assessment on September 28, 2012. The group includes 22 members from various government and non-government agencies/organizations, under the chairmanship of Chairman NDMA. The National Working Group has already met twice, and has constituted four  subject-specific Technical Sub-groups to lead and coordinate the efforts for earthquake hazard, flood hazard, exposure, and vulnerability & risk communication. 
+The World Bank is providing technical advisory support to the National Working Group. 
+
+   </p>
+   <h4>National Working Group Members</h4>
+  <ul> 
+  
+  
+  </ul>
+
+<li><a href="/people/profile/CHNDMA/">Chairman</a>- <a href="http://www.ndma.gov.pk/">NDMA</a>, Islamabad</li>
+<li><a href="/people/profile/SUPARCO/">Member SAR</a> - <a href="http://www.suparco.gov.pk/">SUPARCO</a>, Islamabad</li>    
+<li><a href="/people/profile/SOP/">Deputy Surveyor General</a>- <a href="http://surveyofpakistan.gov.pk/">Survey of Pakistan</a>, Islamabad</li>
+<li><a href="/people/profile/GSP/">Director General </a> - <a href="http://www.gsp.gov.pk/"> Geological Survey of Pakistan</li>
+<li><a href="/people/profile/DGPMD/"> Director General</a>-  <a href="https://www.pmd.gov.pk"> Pakistan Meteorological Department</a>, Islamabad</li>
+<li><a href="/people/profile/DRMSWB/">Disaster Risk Management Specialist </a> - <a href="http://www.worldbank.org/en/country/pakistan?/"> World Bank Pakistan</li>
+<li><a href="/people/profile/DRRNDMA/">Member DRR</a>- <a href="http://www.ndma.gov.pk/">NDMA</a>, Islamabad</li>
+
+
+<li><a href="/people/profile/WAPDA/"> Chief Engineer(H&WM)</a> - <a href="http://www.wapda.gov.pk/">WAPDA</a>, Lahore</li>
+<li><a href="/people/profile/FFC/">Chief Engineer</a>- <a href="http://www.ffc.gov.pk/"> Federal Flood Commission</a>, Islamabad</li>
+<li><a href="/people/profile/JICA/"> Deputy Resident Representative</a>- <a href="http://www.jica.go.jp/pakistan/english/">JICA</a>, Islamabad</li>
+<li><a href="/people/profile/CCE/"> Director General</a>-  <a href="http://www.environment.gov.pk/"> Climate Change & Environment</a></li>
+<li><a href="/people/profile/MOCC/"> Director General EPA</a>- <a href="http://www.environment.gov.pk/">  Ministry of Climate Change</a></li>
+<li><a href="/people/profile/MOHW/">MOHW - Director General</a> -  <a href="http://www.housing.gov.pk">Ministry of Housing & Works, Islamabad</li>
+
+<li><a href="/people/profile/FDMA/"> -- Director General</a>- <a href="http://www.fdma.gov.pk/">  FATA Disaster Management Authority</a></li>
+<li><a href="/people/profile/GBDMA/"> -- Director General</a>- <a href=" http://gilgitbaltistan.gov.pk/">   Gilgit Baltistan  Disaster Management Authority</a></li>
+
+<li><a href="/people/profile/PDMABN/">-- Director General </a> - <a href="http://www.pdma.gob.pk/"> PDMA Balochistan</li>
+<li><a href="/people/profile/PDMAKP/">-- Director General </a> - <a href="http://www.pdma.gob.pk/"> PDMA Khyber Pakhtunkhwa</li>
+<li><a href="/people/profile/PDMAPB/">-- Director General </a> - <a href="http://www.pdma.gob.pk/"> PDMA Punjab</li>
+<li><a href="/people/profile/PDMASD/">-- Director General </a> - <a href="http://www.pdma.gob.pk/"> PDMA Sindh</li>
+<li><a href="/people/profile/SDMA/">-- Director General </a> - <a href="http://sdma.ajk.gov.pk/"> State Disaster Management Authority</li>
+<li><a href="/people/profile/GHQ/"> Engineer Directorate Representative</a>(Engineering Department </a> - 
+<a href="http://www.pakistanarmy.gov.pk/"> GHQ</a> Rawalpindi </li>
+<li><a href="/people/profile/MOFSR/"> Food Commission </a> - <a href="http://www.mnfsr.gov.pk/"> Ministry of National Food Security & Research (MNFSR)
+</a></li>
+<li><a href="/people/profile/NUST/">Head of Institute of GIS </a>-  <a href="http://www.nust.edu.pk"> NUST</a>, Islamabad</li>
+<li><a href="/people/profile/NCEG/"> Head</a> of <a href="http://nceg.upesh.edu.pk/">National Centre of Excellence in Geology</a>, University of Peshawar</li>
+<li><a href="/people/profile/MOD/"> Joint Secretary </a> of <a href=" http://www.mod.gov.pk/">Ministry of Defense</a>,Islamabad</li>
+<li><a href="/people/profile/PDD/"> Member Infrastructure </a>,<a href="http://www.pakistan.gov.pk/">Planning & Development Division,</a> Islamabad</li>
+<li><a href="/people/profile/NESPAK/">Vice President </a>, 
+Geo Technical & Geo Environmental Engineering Division
+<a href="http://www.nespak.com.pk/">NESPAK</a>, Lahore</li>
+<li><a href="/people/profile/PEC/">PEC</a> -<a href="http://www.pec.org.pk/"> Pakistan Engineering Council</a></li>
+
+</ul>
+  
+{% endblocktrans %}
+{% endblock %}
+
+{% block sidebar %}
+	<div class="rightmenu">
+						<h1> Main menu</h1>
+						<ul>
+						<a href="{% url "home" %}"> <li>{% trans "Message from Chairman" %}</li></a>         
+						 <a href="{% url "developer" %}"> <li>{% trans "National Working Group" %}</li></a>          
+						 <a href="{% url "about" %}"> <li>{% trans "Documents" %}</li></a>			
+						 <a href="{% url "maps_browse" %}"> <li>{% trans "Contact Us" %}</li></a>
+						 <a href="{% url "layer_browse" %}"> <li>{% trans "Feedback" %}</li></a>
+						
+								</ul>
+		</div>
+
+ {% endblock %}

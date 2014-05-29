@@ -1,0 +1,26 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "About Chairman NDMA" %} — {{ block.super }} {% endblock %}
+
+{% block body %}
+   {% blocktrans %}
+   
+  <h4>Maj. Gen. Muhammad Saeed Aleem</h4>
+<div class="span8">
+ <p style=" text-align: justify; ">
+ <img src="../static/img/chairman.jpg" width="212" height="292" style="float: left; margin-right:20px">
+Major General Muhammad Saeed Aleem, Hilal-e-Imtiaz (Military) has assumed the office of Chairman National Disaster Management Authority (NDMA) with effect from 25th February, 2013. He brings along a rich experience of command, staff and instructional assignments in Pakistan Army in various parts of the country including a tenure at Siachen Glacier in Gilgit Baltistan where he experienced impact of natural hazards from close quarters. He has also served on a diplomatic assignment as Defence Attaché in a Pakistani Mission abroad for three & half years.
+  </p>
+
+ <p style=" text-align: justify; ">
+  He graduated with bachelor degree with a Gold Medal from Pakistan Military Academy Kakul in 1979. He then attended Army Staff Course at Royal Military College of Science Shrivenham and Staff College Camberley, UK in 1989. He is also a graduate of National Defence University, Islamabad where he was awarded a degree of Master of Science in War Studies.
+   </p>
+   <p style=" text-align: justify; ">
+   For his long and meritorious service, he has been conferred Hilal-e-Imtiaz (Military) on 23rd March, 2010 by the Government of Pakistan.
+   </p> 
+   </div> 
+{% endblocktrans %}
+{% endblock %}
+
+

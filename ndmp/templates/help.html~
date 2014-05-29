@@ -1,0 +1,60 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Risk Assessment" %} - {{ block.super }} {% endblock %}
+
+{% block body %} 
+  <header class="jumbotron subhead" id="overview">
+    <h2>{% trans "About Risk Assessment" %}</h2>
+  </header>
+
+  {% blocktrans %}
+
+  <h4 id="Definitions">Definitions </h4>
+
+  <p> There is a variety of definitions of hazards, risk, vulnerability, and related terms. The definitions and understanding of these terms reflect the attitude towards the underlying causes and factors of risk and, at the same time, influence concepts and strategies of disaster management. There has been a shift from regarding disasters as extreme events caused by natural forces, to viewing them as manifestations of unresolved (human) development problems. </p>
+ 
+  <h4 id="Hazards">Hazards </h4>
+
+ <p>A potentially damaging physical event, phenomenon or human activity that may cause the loss of life or injury, property damage, social and economic disruption or environmental degradation. Hazards can include latent conditions that may represent future threats and can have different origins: natural (geological, hydrometeorological and biological) or induced by human processes (environmental degradation and technological hazards). Hazards can be single, sequential or combined in their origin and effects. Each hazard is characterized by its location, intensity, frequency and probability. </p>
+  
+<h4 id="HazardvsEvent">Hazard versus Event, Disaster and Risk</h4>
+<p>
+While Hazards have been and may be differently defined in different contexts, it should be stressed that the term Hazard needs to be differentiated from Event, Disaster and Risk. Shortly, Hazards are no events, but only potential harmful events, whereas a Disaster is the impact of a hazard that has materialized to an event, on a community, human assets and/or natural resources. </p>
+
+<p>Risk, The probability of harmful consequences, or expected loss of lives, people injured, property, livelihoods, economic activity disrupted (or environment damaged) resulting from interactions between natural or human induced hazards and vulnerable conditions. Risk is conventionally expressed by the equation </p>
+
+<h4>Risk = Hazard × Vulnerability.</h4>
+<p>Another concept that is widely applied in disaster research is risk being composed of the three components Hazard, Exposure, and Vulnerability (Schneiderbauer and Ehrlich in Birkmann 2006) illustrated with the Risk Triangle by Crichton (1999). The risk concept presented in the previous figure is based on a separation of the impact of hazard events into exposure and vulnerability. </p>
+<img src="../static/img/triangle.gif" />
+
+
+<p>Exposure refers to the quantity of the exposed elements: Elements at risk, an inventory of those people or artifacts that are exposed to a hazard. One may add environmental/natural assets to the list of potentially exposed items, although these are more difficult or often impossible to quantify. </p>
+
+<p>Vulnerability refers to The conditions determined by physical, social, economic, and environmental factors or processes, which increase the susceptibility of a community to the impact of hazards. </p>
+
+<p>While Exposure in the above cited definition can be measured by studies, Vulnerability, on the other hand, is a very complex and often in many respects intangible property that cannot be directly measured and hardly be quantified in absolute terms. Yet, the decrease of vulnerability (and the increase of coping capacities and resilience) has moved in the focus of disaster management strategies and superseded the mainly technical prevention or mitigation of disasters. In this respect the development of Vulnerability Indicators is of importance.</p>
+
+<h4 id="about">About Risk Assessment Platforms</h4>
+
+<p>This program,launched in 2011 by the Global Facilityfor Disaster Reduction and Recovery
+(GFDRR) is a critical component ofthe strategy toward helping countriesbetter understand and manage disasterand climate risk. Access to the rightinformation for decision-making isan essential component of buildingresilience and cuts across all componentsof this agenda.</p>
+
+<p>To build resilient societies, policymakers and the public must have access to the right data sets and information to inform good decisionsdecisions such as where and how to build safer schools, how to insure farmers against drought, and how to protect coastal cities against future climate impacts.</p>
+
+<p>Sharing data and creating open systems promotes transparency, accountability, and ensures a wide range of actors is able to participate in the challenge of building resilience. Too often, however, these data are scattered across a wide range of actors from different ministries or administrative units, the private sector, and international or nongovernmental organizations. Existing data sharing arrangements between these groups are frequently weak or informal and technology limitations or specious concerns related to privacy, security, or cost recovery hamper best-practice approaches.</p>
+
+<p>Risk analysis has also typically been a closed process conducted by private consultancies and expert practitioners with limited participation or input from the broader government sector and the public. This has led to a lack of meaningful use of the outputs in policy-making and planning processes, unnecessary duplication of work, and a failure to meaningfully communicate this information to at risk populations.</p>
+
+  {% endblocktrans %} 
+{% endblock %}
+
+{% block sidebar %}
+  <ul class="nav nav-list">
+    <li class="nav-header">{% trans "Sections" %}</li>
+    <li><a href="#Definitions">{% trans "Definitions" %}</a></li>
+    <li><a href="#Hazards">{% trans "Hazards" %}</a></li>
+    <li><a href="#HazardvsEvent">{% trans "Hazard Vs Event, Disaster and Risk" %}</a></li>
+    <li><a href="#about">{% trans "About Risk Assessment Platforms" %}</a></li>
+   </ul>
+{% endblock %}

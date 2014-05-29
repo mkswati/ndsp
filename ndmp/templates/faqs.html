@@ -1,0 +1,49 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% block title %} {% trans "Frequently Asked Questions" %} - {{ block.super }} {% endblock %}
+
+{% block body %} 
+  <header class="jumbotron subhead" id="overview">
+    <h2>{% trans "Frequently Asked Questions" %}</h2>
+  </header>
+
+ 
+     
+ 
+   <h5>Question What is Disaster Information Platform?
+</h5><p style=" text-align: justify; ">Answer: Disasterinfo is a centralized data sharing platform for policy makers, planners, researchers and all stakeholders which are associated with disaster risk reduction in Pakistan.
+<h5>Question What is the purpose of Disaster Information Platform?
+</h5><p style=" text-align: justify; ">Answer: Basic purpose of this platform is to enable technical agencies to get an idea of risk posed by different hazards in different locations of the country. This platform also has the ability to visually present information in form of maps. 
+<h5>Question Who maintains Disaster Information Platform?
+</h5><p style=" text-align: justify; ">Answer: National Disaster Management Authority maintains this platform.
+<h5>Question Who can access Disaster Information Platform?
+</h5><p style=" text-align: justify; ">Answer: Public sector agencies, private sector entities, technical agencies, academicians, DRR practitioners, and general public can access this platform.
+<h5>Question How can I view static maps?
+</h5><p style=" text-align: justify; ">Answer: You can click on    <a href="{% url "maps_browse" %}"><img src="../static/img/small/maps.png"></a> in main menu and explore all the maps created by different technical agencies.
+<h5>Question How can I create my own maps?
+</h5><p style=" text-align: justify; ">Answer: 
+You can create your own maps by clicking <a href="{% url "layer_browse" %}"><img src="../static/img/small/createnewmap.png"></a> button at the top right side and can select as many layers as you want to add to the map editor using the plus sign  <img src="../static/img/small/Addlayers.png">button located at top left side.
+
+<h5>Question What are layers?
+</h5><p style=" text-align: justify; ">Answer: Layers represent the visual representation of a geographic features e.g.  you can show information like roads, rivers and settlements etc in layers.  
+<h5>Question What is the difference between maps and create maps?
+</h5><p style=" text-align: justify; ">In maps, you can explore static maps that have been prepared by different technical agencies using various layers of data while in create maps; you can create your own custom maps by adding different layers as per your requirements. 
+<h5>Question where can I find the case studies and best practices in  Risk Assessment undertaken in different countries?
+</h5><p style=" text-align: justify; ">Answer: You can find some of case studies under the  <a href="{% url "casestudies" %}"><img src="../static/img/small/casestudies.png"></a> tab in main menu to get an idea of similar activities undertaken in other countries of the world.
+<h5>Question Can this platform provide information about upcoming events regarding  Risk Assessment and modeling?
+</h5><p style=" text-align: justify; ">Answer: Yes. You can check the list of upcoming events on <a href="{% url "home" %}"> <img src="../static/img/small/home.png"></a>  menu.
+<h5>Question How can I understand basic terminologies of  Risk Assessment?
+</h5><p style=" text-align: justify; ">Answer: Click on the  <a href="{% url "riskinfo" %}"><img src="../static/img/small/riskassessment.png"></a> for standard and internationally agreed definitions of risk assessment terminologies.
+
+ {% blocktrans %}
+  {% endblocktrans %} 
+{% endblock %}
+
+{% block sidebar %} 
+  <ul class="nav nav-list">
+    <li class="nav-header"></li>
+   <!-- <li><a href="#Objectives">{% trans "" %}</a></li> -->
+   
+   </ul>
+{% endblock %}
